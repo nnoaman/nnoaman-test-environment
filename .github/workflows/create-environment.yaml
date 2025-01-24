@@ -34,7 +34,7 @@ jobs:
         with:
           application_id: ${{ secrets.APPLICATION_ID }}
           application_private_key: ${{ secrets.APPLICATION_PRIVATE_KEY }}
-          #organization: ${{ github.repository_owner }}
+          organization: ${{ github.repository_owner }}
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -59,7 +59,8 @@ jobs:
           deployer_name=${environment}-${region_map}-${deployer_vnet}-INFRASTRUCTURE
           library_name=${environment}-${region_map}-SAP_LIBRARY
 
-          url_to_call=/repos/${{ github.repository }}/environments/${deployer_name^^}
+          github_environment_name=SDAF-${environment}
+          url_to_call=/repos/${{ github.repository }}/environments/${github_environment_name^^}
 
           _=$(gh api \
             -X PUT \
@@ -82,9 +83,9 @@ jobs:
             | sed "s|@@REGION@@|${region}|g" \
             > WORKSPACES/LIBRARY/${library_name^^}/${library_name^^}.tfvars
 
-          # Update the environment in the issue-closed workflow
-          workspace=$(ls ${GITHUB_WORKSPACE}/WORKSPACES|tail -n 1)
-          yq -i '.jobs.link-azure.environment = "'${deployer_name^^}'"' .github/workflows/issue-closed.yaml
+          # # Update the environment in the issue-closed workflow
+          # workspace=$(ls ${GITHUB_WORKSPACE}/WORKSPACES|tail -n 1)
+          # yq -i '.jobs.link-azure.environment = "'${deployer_name^^}'"' .github/workflows/issue-closed.yaml
 
           git config --global --add safe.directory ${GITHUB_WORKSPACE}
           git config --global user.name "GitHub Actions"
