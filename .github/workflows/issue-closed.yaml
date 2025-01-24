@@ -100,4 +100,4 @@ jobs:
           fi
         env:
           GH_TOKEN: ${{ github.token }}
-    environment: PROD-NOEU-DEP02-INFRASTRUCTURE
+    environment: MGT-EUS2-DEP03-INFRASTRUCTURE
