@@ -19,6 +19,7 @@ on:
         type: choice
         options:
           - MGMT-WEEU-SAP_LIBRARY
+          - MGT-EUS2-SAP_LIBRARY
           - PROD-NOEU-SAP_LIBRARY
       use_webapp:
         default: true
