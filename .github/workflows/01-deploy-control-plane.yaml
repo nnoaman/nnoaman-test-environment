@@ -18,6 +18,7 @@ on:
         description: "Select the SAP Library to deploy"
         type: choice
         options:
+          - ABCD-NOEU-SAP_LIBRARY
           - MGMT-WEEU-SAP_LIBRARY
           - MGT-EUS2-SAP_LIBRARY
           - PROD-NOEU-SAP_LIBRARY
