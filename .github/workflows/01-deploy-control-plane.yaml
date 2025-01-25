@@ -15,6 +15,7 @@ on:
         type: choice
         options:
           - ABCD-NOEU-DEP04-INFRASTRUCTURE
+          - DEV-NOEU-DEP91-INFRASTRUCTURE
           - MGMT-WEEU-DEP01-INFRASTRUCTURE
           - MGT-EUS2-DEP03-INFRASTRUCTURE
           - PROD-NOEU-DEP02-INFRASTRUCTURE
@@ -24,6 +25,7 @@ on:
         type: choice
         options:
           - ABCD-NOEU-SAP_LIBRARY
+          - DEV-NOEU-SAP_LIBRARY
           - MGMT-WEEU-SAP_LIBRARY
           - MGT-EUS2-SAP_LIBRARY
           - PROD-NOEU-SAP_LIBRARY
