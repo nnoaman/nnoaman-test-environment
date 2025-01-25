@@ -1,0 +1,13 @@
+ARM_SUBSCRIPTION_ID=d6c8e3b6-467e-452e-97c9-49d9de9e37da
+sshsecret=DEV-NOEU-DEP91-sshkey
+deployer_random_id=wOP0wg
+deployer_public_ip_address=52.169.147.129
+deployer_app_config_name=devnoeuapcc0e
+created_resource_group_name=DEV-NOEU-DEP91-INFRASTRUCTURE
+keyvault=DEVNOEUDEP91userC0E
+environment=DEV
+subscription=d6c8e3b6-467e-452e-97c9-49d9de9e37da
+client_id=0b0a1e19-3d5a-4995-b5f0-57d6e7bd1c50
+tenant_id=c01abe72-ffef-4ecc-bda0-937975b49e6b
+STATE_SUBSCRIPTION=d6c8e3b6-467e-452e-97c9-49d9de9e37da
+step=2
