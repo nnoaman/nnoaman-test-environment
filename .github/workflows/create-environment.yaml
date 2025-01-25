@@ -92,7 +92,7 @@ jobs:
           git config --global user.email "sap-automation-deployer@noreply.github.com"
 
           git add WORKSPACES
-          git add .github/workflows/issue-closed.yaml
+          #git add .github/workflows/issue-closed.yaml
 
           git commit -m "Add configuration for ${environment} in ${region}"
           git push
