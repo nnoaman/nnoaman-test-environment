@@ -12,7 +12,12 @@ on:
       deployer:
         description: "Select the deployer you created"
         required: true
-        type: environment
+        type: choice
+        options:
+          - ABCD-NOEU-DEP04-INFRASTRUCTURE
+          - MGMT-WEEU-DEP01-INFRASTRUCTURE
+          - MGT-EUS2-DEP03-INFRASTRUCTURE
+          - PROD-NOEU-DEP02-INFRASTRUCTURE
       library:
         default: MGMT-NOEU-SAP_LIBRARY
         description: "Select the SAP Library to deploy"
